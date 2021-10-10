@@ -1,25 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import { useSelector } from 'react-redux';
+import TodoList from './components/TodoList';
 
 function App() {
+  const state = useSelector((state) => ({ ...state }));
+  console.log(state);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TodoList />
     </div>
   );
 }
 
 export default App;
+
+
+// const mapStateToPros = state => {
+//   return {
+//     count: state
+//   };
+// };
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     handleIncrementClick: () => dispatch({ type: 'INCREMENT' }),
+//     handleDecrementClick: () => dispatch({ type: 'DECREMENT' })
+//   }
+// };
+// export const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
