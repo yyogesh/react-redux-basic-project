@@ -7,15 +7,15 @@ import { completeTodo } from '../state/action';
 
 
 const TodoList = () => {
-    const todos = useSelector((state) => ({ ...state.todos }))
-    console.log('todos', todos)
+    const state = useSelector((state) => ({ ...state.todos }))
+    console.log('todos', state)
     return (
         <div className="TodoList">
             <h1>Todo app </h1>
             <TodoInput />
             <ul>
                 <TransitionGroup className="todo-list">
-                    {todos && todos.todos.map((todo, i) => {
+                    {state && state.todos.map((todo, i) => {
                         return <CSSTransition key={i} className="todo">
                             <h2>{todo.task}</h2>
                         </CSSTransition>

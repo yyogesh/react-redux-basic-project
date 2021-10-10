@@ -6,7 +6,7 @@ const TodoInput = () => {
     const handleSubmit = () => { }
     return (
         <form className="TodoInput" onSubmit={handleSubmit}>
-            <input className="TodoInput" type="text" placeholder="Enter task" id="task" name="task"
+            <input type="text" placeholder="Enter task" id="task" name="task"
                 value={task} onchange={(e) => setTask(e.target.value)} />
 
             <button>Add Todo</button>

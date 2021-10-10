@@ -19,7 +19,7 @@
   .TodoInput button {
     padding: 0 1.3rem;
     border: none;
-    background: red;
+    background: #004cb0;
     color: white;
     text-transform: uppercase;
     font-weight: bold;
